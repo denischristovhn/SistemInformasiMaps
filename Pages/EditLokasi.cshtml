@@ -1,0 +1,26 @@
+﻿@page
+@model SistemMaps.Pages.EditLokasiModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<body>
+    <h2>Edit Location</h2>
+
+    <form method="post">
+        <input type="hidden" name="Formulir.Id" value="@Model.Formulir.Id" />
+
+        <label for="NamaLokasi">Location Name</label>
+        <input type="text" id="NamaLokasi" name="Formulir.NamaLokasi" value="@Model.Formulir.NamaLokasi" required />
+
+        <label for="Alamat">Address</label>
+        <input type="text" id="Alamat" name="Formulir.Alamat" value="@Model.Formulir.Alamat" required />
+
+        <label for="Latitude">Latitude</label>
+        <input type="number" step="any" id="Latitude" name="Formulir.Latitude" value="@Model.Formulir.latitude" required />
+
+        <label for="Longitude">Longitude</label>
+        <input type="number" step="any" id="Longitude" name="Formulir.Longitude" value="@Model.Formulir.longitude" required />
+
+        <button type="submit">Update</button>
+    </form>
+</body>
